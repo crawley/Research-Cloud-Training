@@ -130,6 +130,8 @@ Then maybe you need cloud computing!
 
 Some (Brief) Case Studies
 
+Note: This is a challenging course to give because the benefits of cloud computing are so abstract and applications diverse. I can't possibly enumerate all the situations in which it might be useful, and I bet you'll come up with ideas I haven't. For the sake of something concrete, here are a couple real case studies of how the Melbourne Research Cloud is being used.
+
 ---
 
 ### Rendering Artwork
@@ -139,7 +141,7 @@ Some (Brief) Case Studies
 
 <img width="300" src="blee.jpg">
 
-Note: Brendan Lee is doing a Masters of Fine Art, and his works are generated in a 3D rendering package. This was getting slow! We helped him provision a powerful computer in the cloud, and install Windows and the rendering package. The work was able to be completed more quickly, and freed up his computer for other work.
+Note: Brendan Lee is doing a Masters of Fine Art, and his works are generated in a 3D rendering package called Carrera. This was getting slow! We helped him provision a powerful computer in the cloud, and install Windows and Carrera. The work was able to be completed more quickly, could be left running unattended, and freed up his computer for other work.
 
 ---
 
@@ -150,7 +152,7 @@ Note: Brendan Lee is doing a Masters of Fine Art, and his works are generated in
 
 <img width="400" src="mri.jpg">
 
-Note: Scott Kolbe and his group at Florey use neuroimaging to study the brain. They do much of their work on cloud-based computers, using a customised environment with all the necessary specialist software pre-installed. Being located in the university data centre, these resources also have high-speed access to data repositories.
+Note: Scott Kolbe and his group at the Florey use neuroimaging to study the brain. They do much of their work on cloud-based computers, using a customised environment with all the necessary specialist software pre-installed. As you might imagine, this software is fiddly to setup and so this saves a bunch of time, makes sure everyone can work consistently, and access powerful computation when needed (they also use HPC on occasion, which I'll talk about in a bit). Since they are using computers in the university data centre, this also means they can access their data stores much more quickly than if they had to go through their local network to upload/download.
 
 ---
 
@@ -158,6 +160,7 @@ Note: Scott Kolbe and his group at Florey use neuroimaging to study the brain. T
 
 i.e. Use a supercomputer!
 
+Note: Another service we provide is HPC via our local cluster, called Spartan. HPC is suited to big analysis jobs, especially for software that can run in Linux. In the cloud you can get your own private resources, whereas in HPC you submit work to a shared system. That could be a good thing or a bad thing depending on your needs.
 
 ---
 
@@ -167,6 +170,13 @@ Need complete control? Don't like sharing/waiting? Hosting a web service? Need W
 
 Don't want to manage a system yourself? Need enormous scale? ➡️ HPC
 
+Note: Here are some guidelines on which to choose. Some researchers use both. We run 1-day training on HPC if you're interested in finding out more, or visit our documentation page.
+
+---
+
+For more info, visit: http://dashboard.hpc.unimelb.edu.au
+
+Note: If you'd like to know more, visit Spartan's homepage which includes details on getting started and training, or feel free to come chat to me.
 
 ---
 
@@ -179,6 +189,7 @@ Domain-specific environments built upon the research cloud.
 * Virtual Geophysics Lab
 * ... and more: https://nectar.org.au/labs-and-tools/
 
+Note: So, in the research cloud we're mostly creating our own environment from scratch. But several groups have built their own specialist platforms ontop, and perhaps there is one to suit you? These include pre-built software, datasets and an established user community.
 
 ---
 
@@ -197,7 +208,7 @@ Domain-specific environments built upon the research cloud.
 * Availability Zone
 * Keypairs
 
-Note: Unfortunately there is some jargon we have to get through. Let's work through these concepts one at a time, and see how they link together. I don't expect it will make sense right away; we'll sketch out these concepts and then work through some concrete examples.
+Note: Unfortunately there is some jargon we have to get through. Let's work through these concepts one at a time, and see how they link together. I don't expect it will make sense right away; we'll sketch out these concepts and then work through some concrete examples with some repetition.
 
 ---
 
@@ -274,7 +285,7 @@ Recap:
 * Use an __Image__ to load an operating system (and perhaps software) onto it.
 * Select a __Keypair__ to use with the __Instance__, allowing us to login.
 * Set some __Security Groups__ to allow network access in/out of the __Instance__.
-* Choose an __Availability Zone__ (data centre) with the Nectar network where our __Instance__ will reside.
+* Choose an __Availability Zone__ (data centre) within the Nectar network where our __Instance__ will reside.
 * We connect to our __Instance__ via __SSH__, which authenticates us using our __Keypair__.
 
 
@@ -286,9 +297,168 @@ Challenge 1: Create an instance and connect to it.
 
 Instructions: http://go.unimelb.edu.au/j7d6
 
-Note: Now it's your turn to have a go! Work in groups; I suggest one person has the instructions open on their computer, while another drives.
+Note: Now it's your turn to have a go! Work in groups; I suggest one person has the instructions open on their computer, while another drives the dashboard and SSH client through their computer.
 
 ---
+
+Where to go for help?
+
+<i class="fa fa-question fa-5x" aria-hidden="true"></i>
+
+
+Note: So, I can't cover every aspect of the research cloud today, and even if I could, you wouldn't remember it all. Today is about getting the basic concepts down, but at some point you're going to need help, either from online resources, or from our support team. This is what distinguishes us from commercial cloud providers (other than being free!), we're here to support you and don't expect you to go it alone.
+
+
+---
+
+Self-Paced Training: http://training.nectar.org.au/
+
+General Documentation: http://support.nectar.org.au/
+
+Helpdesk: support@nectar.org.au or call 1300 080 431 (9am-7pm).
+
+Note: (To be updated when local Melbourne docs and queue online) We have a few options -- you can check out Nectar's self-paced training which goes over everything in detail, and just pick up sections you need. Or there is specific documentation. Failing that, you're very welcome to contact us via our helpdesk.
+
+---
+
+<img width="1200" src="support_in_dashboard.png">
+
+Note: In fact, you can contact the helpdesk right inside the dashboard by clicking here.
+
+---
+
+<img width="1200" src="create_ticket.png">
+
+Note: ... you can access the documentation from here, or submit a ticket.
+
+---
+
+Challenge 2: Find out about Object Storage
+
+* Use the training/documentation/Google to figure out:
+    * How to upload a file to object storage from the dashboard?
+    * How many copies of your data does the object store keep to ensure integrity?
+
+Hint: http://training.nectar.org.au/package07/sections/objectStorage.html
+
+Note: So I've described roughly what object storage is about, have a go at trying to upload a file from your computer to object storage, referring to whatever online documentation you can find. If you can't find what you need, that's perfectly okay, just let me know and I'll help.
+
+---
+
+Recap: Object Store
+
+Note: Ask what resources people found. Did you figure it out, or was something missing? Show how to upload something to the dashboard, and go through the documentation, which outlines other options -- we can also upload files via GUI and command line tools.
+
+---
+
+Security!
+
+<img width="800" src="security.jpg">
+
+Note: Now a few words on security. Unlike your official university computer, which is locked down by central IT, we give you alot of freedom on the research cloud. But with this comes some security hazards which you need to be aware of.
+
+---
+
+* Joint responsibility
+    * We protect the cloud backend
+    * But you are responsible for what runs on it
+
+Note: We have joint responsibility; the research cloud has a team working on keeping the infrastructure operational and secure; but we don't control (or necessarily know) what you're running inside it. For example, if you run some very old blogging software with known vulnerabilities, it's possible your instances will be taken over, and we won't notice until someone else on the web makes a complaint. This doesn't happen often (perhaps once a month), but does occur. The hackers aren't out to get you exactly, there are some just bad actors that scan the internet for every single machine that exhibits a particular known vulnerability.
+
+---
+
+Basic Security Principles
+
+Note: It's not possible to eliminate all security risks, but there are some simple steps you can take which don't require a bunch of specialist know-how.
+
+---
+
+Minimise Means of Access
+
+* Only allow access from necessary ports/addresses.
+* Power off or terminate resources you don't need.
+* Don't run services you don't need.
+
+<img width="800" src="tiny_door.jpg">
+
+Note: The first step is to provide only the bare minimum means of access to do your work. Ideally, power off or suspend your machine when you're not using it (can't hack a machine that's turned off!) Don't add security groups you don't need (ideally just stick to SSH, and keep your private key safe), and if possible lock down access to particular IP address ranges. For example, you could limit access to addresses used by the University virtual private network (VPN; staff: 10.1.128.0/22, student: 10.9.128.0/22). In reality though, you might to run a web server or similar, in which case you have to take a more active role.
+
+---
+
+Keep OS and Software Up-To-Date
+
+* Subscribe to relevant updates/advisories.
+
+(screenshot example?)
+
+Note: If you're running something like a web app, database or other service that's possible for others to access, you have to be a bit more diligent. This includes keeping both your operating system (OS) up to date, as well as the software running on it. Over time security flaws are discovered in various packages, and if you hold onto an old version for too long, it's possible it could be compromised.
+
+---
+
+<img width="800" src="wordpress.png">
+
+Note: Here's an example of the sort of thing I'm talking about. Wordpress is a really popular blogging platform, and the sort of software you might like to host yourself on the research cloud. Much sure you subscribe to their newsletter or similar so you can be kept up to date about new versions. Some of these will be about fixing bugs or adding features, but others will be around fixing security flaws that have been discovered.
+
+---
+
+Sensitive Data?
+
+* Be aware of ethics, funding and institution requirements.
+* Encrypt sensitive data, and secure the decryption key/password.
+
+Note: Let's say your instance has been compromised somehow, even after being very careful. Unfortunately it still happens despite best intentions, for example through social engineering, physical theft or human error. How can you limit the resulting damage? If you're working with potentially sensitive data, it's worth considering an extra layer of protection, including encrypting files.
+
+---
+
+Software Licensing
+
+* You can BYO license
+* Or use a a University site license, provided you select a Melbourne availability zone.
+
+Note: You might be wondering about commercial licensed software. Well, just about anything you can run on your own computer will work in the cloud too, and most software licenses allow for that. You're welcome to bring your own license for a piece of software if you already have it, or the University has quite an extensive range of licensed software already available, including things like MATLAB, and just about every Microsoft product. The one thing to keep in mind is that generally University licensed software has to run on University hardware, in which case you must select a Melbourne Availability Zone for your instance.
+
+---
+
+Backup
+
+Things can still go wrong ☹️
+
+Note: Say there has been a security issue, hardware failure, or you have just goofed somehow, and you need to recover. The Research Cloud makes it easy to create backups so you can do so.
+
+--
+
+Introducing Snapshots
+
+* Like an image, but copied from an existing instance.
+* Includes: Everything - OS, Software, Data
+* Use for backup, duplicating instances, and more!
+
+Note: You can make a copy of your instance, including the OS, your data, and any software you've installed, and this is called a snapshot. You can then use that snapshot to create a new instance with the exact same setup. This can be used to roll back to an earlier setup, or clone an existing one (i.e. have multiple identical instances).
+
+--
+
+Don't forget the object store
+
+Automatically keeps three copies of your data ➡️ Free backup!
+
+Note: Data in the object store is quite safe, as at least three copies are kept at any one time, including a copy off-site. So if you can, it's really handy to keep your data there, and you can access it from your desktop, instances, anywhere really. Keep in mind though that it won't protect against human error, i.e. accidental deletion!
+
+--
+
+Challenge 3: Clone your instance using a snapshot
+
+
+
+--
+
+
+* Need a slide on other data services from ResPlat?
+
+---
+
+
+
+
 
 
 

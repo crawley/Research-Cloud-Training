@@ -35,6 +35,8 @@ Let's go!
 8. You're now connected to your instance! Try running a command; type the following into the command prompt and hit enter:
 ```echo hello world > hello.txt```
 
-This will write `hello world!` to a textfile called `hello.txt`.
+This will write `hello world!` to a text file called `hello.txt`.
+
+If you type the command `ls` you'll see the file in your current directory, and if you type `cat hello.txt` it will display its contents.
 
 9. Yell out if you get stuck. Alternatively, if this was easy for you, lend a hand to those nearby!
