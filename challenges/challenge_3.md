@@ -16,6 +16,8 @@ N.B. We should shut-off our instance before creating a snapshot, if at all possi
 
 4. From the 'Images' section of the dashboard, select the 'Launch Instance' action. The 'Instance Boot Source' and 'Instance Snapshot' fields will be filled automatically, but otherwise set the flavor, keypair and security groups as per the first challenge, and the instance name to whatever you like.
 
-5. Launch the instance 
+5. Launch the instance.
+
+6. Once your instance has started, connect to it over SSH. Type `ls` at the command line (to list files in your current working directory). Note that the file `hello.txt` that you created in the first challenge is already there — it was copied over in the snapshot.
 
 
