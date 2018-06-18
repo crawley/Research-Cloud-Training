@@ -36,6 +36,10 @@ Note: Here's an outline of what we're going to cover. We're going to keep things
 
 ---
 
+PDF Slides: http://go.unimelb.edu.au/mm56
+
+---
+
 ## Part 1: Background
 
 ---
@@ -651,5 +655,7 @@ To get started with a Linux desktop: http://training.nectar.org.au/package07/sec
 ## The End
 
 Questions?
+
+PDF Slides: http://go.unimelb.edu.au/mm56
 
 ---
