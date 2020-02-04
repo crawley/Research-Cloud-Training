@@ -316,7 +316,7 @@ Self-Paced Training: http://training.nectar.org.au/
 
 General Documentation: http://support.nectar.org.au/
 
-Helpdesk: support@nectar.org.au or call 1300 080 431 (9am-7pm).
+Helpdesk: support@nectar.org.au.
 
 Note: (To be updated when local Melbourne docs and queue online) We have a few options -- you can check out Nectar's self-paced training which goes over everything in detail, and just pick up sections you need. Or there is specific documentation. Failing that, you're very welcome to contact us via our helpdesk.
 
